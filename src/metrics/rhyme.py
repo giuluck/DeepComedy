@@ -1,5 +1,5 @@
 import re
-import syllabification as s
+from metrics import syllabification as s
 
 
 # Rhyme scoring and extraction module. Exploits information about accents, syllables and heuristics to perform

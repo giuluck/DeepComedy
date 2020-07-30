@@ -4,7 +4,7 @@ import re
 # Syllabification module.
 # A special thanks goes to Simona S., Italian linguist, teacher and friend, without whom this module could never exist.
 
-# This module is used both for building the dataset and for computing metrics.
+# This module is used both for building the dataset and for computing metric.
 # IMPORTANT: the #, @ and § characters are used internally to correctly split syllables,
 #            the input texting should not contain them.
 
