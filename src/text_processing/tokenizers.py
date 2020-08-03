@@ -27,7 +27,7 @@ def word_tokenizer(text=DIVINE_COMEDY):
         decode_token_separator=''
     )
 
-def subword_tokenizer(text=DIVINE_COMEDY, target_vocab_size=1024, max_subword_length=3):
+def subword_tokenizer(text=DIVINE_COMEDY, target_vocab_size=2048, max_subword_length=3):
     return tfds.features.text.SubwordTextEncoder.build_from_corpus(
       corpus_generator=get_words(text) + get_punctuation(text),
       target_vocab_size=target_vocab_size,
