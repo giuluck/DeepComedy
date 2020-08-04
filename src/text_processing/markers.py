@@ -1,5 +1,4 @@
 import re
-from utils import resources
 
 DIVIDING_SYMBOL = '='
 MARKERS = {
@@ -11,7 +10,7 @@ MARKERS = {
 }
 
 
-def mark(text=resources.DIVINE_COMEDY):
+def mark(text):
     text = '\n' + text
 
     # replace canto name with 'end+\n+start' marker
