@@ -1,6 +1,6 @@
 import re
+from utils import resources
 
-DIVINE_COMEDY = open('../res/divine_comedy.txt', 'r').read()
 DIVIDING_SYMBOL = '='
 MARKERS = {
     'tercet': f'{DIVIDING_SYMBOL}tercet{DIVIDING_SYMBOL}',
@@ -10,7 +10,8 @@ MARKERS = {
     'cantica end': f'{DIVIDING_SYMBOL}endofcantica{DIVIDING_SYMBOL}'
 }
 
-def mark(text=DIVINE_COMEDY):
+
+def mark(text=resources.DIVINE_COMEDY):
     text = '\n' + text
 
     # replace canto name with 'end+\n+start' marker
@@ -36,6 +37,7 @@ def mark(text=DIVINE_COMEDY):
     text = re.sub('\n\n', f'\n{MARKERS["tercet"]}\n', text)
 
     return text
+
 
 def unmark(text):
     for marker in MARKERS.values():
