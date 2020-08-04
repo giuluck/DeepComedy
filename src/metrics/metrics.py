@@ -1,13 +1,14 @@
 import re
 from metrics import syllabification as s
 from metrics import rhyme as r
+from metrics import ngrams_plagiarism as p
 
 
 # Metrics evaluation module.
 
 # Evaluates metrics on a texting, computing each value on a per-terzina basis and then outputting the average scores.
 # If verbose, outputs the scores referred to each terzina.
-def evaluate(text, verbose=False, synalepha=True, permissive=False, rhyme_threshold=1.0):
+def evaluate(text, original_text='', verbose=False, synalepha=True, permissive=False, rhyme_threshold=1.0):
     terzine = _extract_terzine(text)
 
     avg_hendecasyllabicness = 0.0
@@ -33,15 +34,27 @@ def evaluate(text, verbose=False, synalepha=True, permissive=False, rhyme_thresh
     if len(terzine) > 0:
         # Each "optimal" terzina has 5 lines, the last of which is shared with the next one
         # (therefore a file with n perfect terzine has 4n + 2 lines, due to the final textay verse and empty line).
+        avg_plagiarism = p.ngrams_plagiarism(text, original_text)
         avg_textucturedness = (4 * len(terzine) + 2) / len(text.split("\n"))
         avg_hendecasyllabicness /= len(terzine)
         avg_rhymeness /= len(terzine) - 1  # The rhymes on the first terzina are not checked.
 
-        print("Number of putative terzine: {}".format((len(text.split("\n")) - 1) // 4))
-        print("Number of well formed terzine: {}".format(len(terzine)))
-        print("Average textucturedness: {}".format(avg_textucturedness))
-        print("Average hendecasyllabicness: {}".format(avg_hendecasyllabicness))
-        print("Average rhymeness: {}".format(avg_rhymeness))
+        if verbose:
+            print("Number of putative terzine: {}".format((len(text.split("\n")) - 1) // 4))
+            print("Number of well formed terzine: {}".format(len(terzine)))
+            print("Average textucturedness: {}".format(avg_textucturedness))
+            print("Average hendecasyllabicness: {}".format(avg_hendecasyllabicness))
+            print("Average rhymeness: {}".format(avg_rhymeness))
+            print('Average plagiarism: {}'.format(avg_plagiarism))
+
+        return {
+            'Putative Tercets': (len(text.split("\n")) - 1)//4,
+            'Well-Formed Tercets': len(terzine),
+            'Text Structuredness': avg_textucturedness,
+            'Hendecasyllabicness': avg_hendecasyllabicness,
+            'Rhymeness': avg_rhymeness,
+            'Plagiarism': avg_plagiarism
+        }
     else:
         print("ERROR: no valid terzina detected.")
 
