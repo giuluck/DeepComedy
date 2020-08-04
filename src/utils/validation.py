@@ -10,7 +10,7 @@ def validation_callback(model, val_dataset, epochs=10, initial_epoch=0, batches_
 
     def batch_end_callback(batch, train):
         batch = batch + 1
-        if batch % batches_intervalg == 0:
+        if batch % batches_interval == 0:
             print(f'  > Batch {batch} - loss {train["loss"]:.4f} - acc {train["accuracy"]:.4f}')
 
     def epoch_begin_callback(epoch, _):
