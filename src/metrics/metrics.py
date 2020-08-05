@@ -1,7 +1,8 @@
 import re
 from metrics import syllabification as s
 from metrics import rhyme as r
-from metrics import ngrams_plagiarism as p
+from metrics import plagiarism as p
+from metrics import repetitivity as v
 
 
 # Metrics evaluation module.
@@ -31,9 +32,11 @@ def evaluate(text, original_text='', verbose=False, synalepha=True, permissive=F
             print("Hendecasyllabicness: {}, Rhymeness: {}".format(hendecasyllabicness, rhymeness))
 
     if len(terzine) > 0:
+        avg_plagiarism = p.ngrams_plagiarism(text, original_text)
+        avg_repetitivity = v.ngrams_repetitivity(text)
+
         # Each "optimal" terzina has 5 lines, the last of which is shared with the next one
         # (therefore a file with n perfect terzine has 4n + 2 lines, due to the final textay verse and empty line).
-        avg_plagiarism = p.ngrams_plagiarism(text, original_text)
         avg_textucturedness = (4 * len(terzine) + 2) / len(text.split("\n"))
         avg_hendecasyllabicness /= len(terzine)
         avg_rhymeness /= len(terzine) - 1  # The rhymes on the first terzina are not checked.
@@ -45,6 +48,7 @@ def evaluate(text, original_text='', verbose=False, synalepha=True, permissive=F
             print("Average hendecasyllabicness: {}".format(avg_hendecasyllabicness))
             print("Average rhymeness: {}".format(avg_rhymeness))
             print('Average plagiarism: {}'.format(avg_plagiarism))
+            print('Average repetitivity: {}'.format(avg_repetitivity))
 
         return {
             'Putative Tercets': (len(text.split("\n")) - 1)//4,
@@ -52,7 +56,8 @@ def evaluate(text, original_text='', verbose=False, synalepha=True, permissive=F
             'Text Structuredness': avg_textucturedness,
             'Hendecasyllabicness': avg_hendecasyllabicness,
             'Rhymeness': avg_rhymeness,
-            'Plagiarism': avg_plagiarism
+            'Plagiarism': avg_plagiarism,
+            'Repetitivity': avg_repetitivity
         }
     else:
         print("ERROR: no valid terzina detected.")

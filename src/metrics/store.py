@@ -5,7 +5,7 @@ from metrics.metrics import evaluate
 def store(result_dir, result_file, temperature, sample_texts, original_text='', verbose=True):
     metrics = [
         'putative tercets', 'well-formed tercets', 'structuredness',
-        'hendecasyllabicness', 'rhymeness', 'plagiarism'
+        'hendecasyllabicness', 'rhymeness', 'plagiarism', 'repetitivity'
     ]
 
     os.makedirs(result_dir, exist_ok=True)
