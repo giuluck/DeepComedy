@@ -2,7 +2,7 @@ import os
 import numpy as np
 from metrics.metrics import evaluate
 
-def store(result_dir, result_file, temperature, sample_texts, original_text='', verbose=True):
+def store(result_dir, result_file, temperature, sample_texts, original_text, verbose=True):
     metrics = [
         'putative tercets', 'well-formed tercets', 'structuredness',
         'hendecasyllabicness', 'rhymeness', 'plagiarism', 'repetitivity'

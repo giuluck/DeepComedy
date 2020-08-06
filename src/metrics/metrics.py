@@ -9,7 +9,7 @@ from metrics import repetitivity as v
 
 # Evaluates metrics on a texting, computing each value on a per-terzina basis and then outputting the average scores.
 # If verbose, outputs the scores referred to each terzina.
-def evaluate(text, original_text='', verbose=False, synalepha=True, permissive=False, rhyme_threshold=1.0):
+def evaluate(text, original_text, verbose=False, synalepha=True, permissive=False, rhyme_threshold=1.0):
     terzine = _extract_terzine(text)
 
     avg_hendecasyllabicness = 0.0
