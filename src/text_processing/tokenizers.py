@@ -10,14 +10,16 @@ def get_words(text):
     return tfds.features.text.Tokenizer().tokenize(text)
 
 
-def char_tokenizer(text):
-    # the vocabulary is made of:
-    # - all the alphanumeric characters of the text
-    # - all the punctuation symbols of the text
-    # - all the markers
-    alphanumeric = list(set([c for c in ''.join(get_words(text))]))
-    vocabulary = alphanumeric + get_punctuation(text) + list(MARKERS.values())
-    # finally, it gets sorted so that each token index will always be assigned to the same character
+def char_tokenizer(text, inner=False):
+    # if we want a tokenizer for a char-level model, the vocabulary should consist of not only of all the alphanumeric
+    # characters of the text but also of all the punctuation symbols of the text and all the markers
+    #
+    # on the other hand, if we want a tokenizer for a word-level model with a char-processing layer,
+    # the vocabulary should consist only of alphanumeric characters
+    vocabulary = list(set([c for c in ''.join(get_words(text))]))
+    if not inner:
+        vocabulary += get_punctuation(text) + list(MARKERS.values())
+    # finally, the vocabulary gets sorted so that each token index will always be assigned to the same character
     vocabulary.sort()
     return tfds.features.text.TokenTextEncoder(
         vocab_list=vocabulary,
