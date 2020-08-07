@@ -26,12 +26,15 @@ def restore_checkpoint(model, directory, file_signature, verbose=True):
         os.makedirs(directory, exist_ok=True)
         return 0
 
+def save_checkpoint(model, epoch, directory, file_signature, epochs_interval=5, verbose=True):
+    epoch = epoch + 1
+    if epoch % epochs_interval == 0:
+        file = filename(directory, file_signature, epoch)
+        model.save_weights(file, overwrite=True)
+        if verbose:
+            print(f'> saving checkpoint for epoch {epoch} at {file}\n')
+
 def checkpoint_callback(model, directory, file_signature, epochs_interval=5, verbose=True):
     def callback(epoch, _):
-        epoch = epoch + 1
-        if epoch % epochs_interval == 0:
-            file = filename(directory, file_signature, epoch)
-            model.save_weights(file, overwrite=True)
-            if verbose:
-                print(f'> saving checkpoint for epoch {epoch} at {file}\n')
+        save_checkpoint(model, epoch, directory, file_signature, epochs_interval, verbose)
     return tf.keras.callbacks.LambdaCallback(on_epoch_end=callback)
