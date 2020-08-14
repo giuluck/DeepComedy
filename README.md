@@ -4,6 +4,7 @@ Neural Network aiming at reproducing the style used by Dante in the Divine Comed
 
 ### *Sample of Generated Canto*
 
+```
 O dolce padre mio, figliuol, che fai
 tanto maravigliar, se tu vuo' ch'i' credi;
 ma sol che 'l tua maggior mai fai mai".
@@ -12,129 +13,129 @@ ma sol che 'l tua maggior mai fai mai".
 non vedi omai; ma vedi quivi
 si volse con li occhi mi saran li piedi.
 
-Io dirò che i veri i dirci andavi,
+Io dirÃ² che i veri i dirci andavi,
 per lo ducio mio, disse: "Figliuol, vedi;
 non ricorditi di me che vien n'accvi.
 
-Ma perché Dio ne porse la guancia
-possanza parlar contenti sì per pace,
+Ma perchÃ© Dio ne porse la guancia
+possanza parlar contenti sÃ¬ per pace,
 che queste parole che con questa lancia.
 
 Lo duca mio si volse tutte quelle,
 che 'l voler con ha fatto ha tolto 'l passo,
 e di volger di fuor di quelle cale.
 
-Lo mondo è uopo di quel ch'ello inferno,
-due è di dubbi, un disposto di sotto:
-che 'l peccato ov' elli è sì scerna.
+Lo mondo Ã¨ uopo di quel ch'ello inferno,
+due Ã¨ di dubbi, un disposto di sotto:
+che 'l peccato ov' elli Ã¨ sÃ¬ scerna.
 
 ove dinanzi dissi: "U' ben disposto
-che là nacque e nacque il secondo nacque,
-e qui non distinse mai è disposto".
+che lÃ  nacque e nacque il secondo nacque,
+e qui non distinse mai Ã¨ disposto".
 
 Qual si poscia tanto amore in tanto nacque
 che l'amore e creature l'ultimo fronte
 in tanto si poscia si preliba,
 
 quando l'anima mia benigna fronte,
-sì che non si volse, e a la sua persona,
+sÃ¬ che non si volse, e a la sua persona,
 se l'altre cose son Iuste pronte.
 
 "O navicella di quella dottrina
 che, se le guance colpe che d'i piedi,
-"Che coscïenza m'è per viva?".
+"Che coscÃ¯enza m'Ã¨ per viva?".
 
 "Io veggio tu", diss' io, "Provenzan come,
-che se' sù ne l'altra bolgia il corta,
-sì che per me s'accorse che mai che mi".
+che se' sÃ¹ ne l'altra bolgia il corta,
+sÃ¬ che per me s'accorse che mai che mi".
 
 Ond' ei rispuose: "Nel suo confonda
 suo volesso, che tu m'avea parlato?
-Però non puoi che 'l viso seconda,
+PerÃ² non puoi che 'l viso seconda,
 
-già misero in sé del vento parlaro,
+giÃ  misero in sÃ© del vento parlaro,
 mi volsi: "Forse tanti occhi piega,
 che 'l sole e 'l mio potere era spargo.
 
 Ma tanto che 'l maestro mi leva
 per quella che ne porga per le esser tarda,
-più che 'l mio amore avea più dica.
+piÃ¹ che 'l mio amore avea piÃ¹ dica.
 
-Però che 'l dolor mi fé arda,
-guardando, come carità che qui nome,
-ver' me perché 'l tuo voler mi tarda".
+PerÃ² che 'l dolor mi fÃ© arda,
+guardando, come caritÃ  che qui nome,
+ver' me perchÃ© 'l tuo voler mi tarda".
 
 E io a lui: "L'angel che tu vuole
 tirarticular del tuo fratei misura,
 che questi cortesi a le parole piene".
 
 Allor si volse del suo proprio voglia,
-disse: "Questi è domandato 'l grave;
+disse: "Questi Ã¨ domandato 'l grave;
 e se 'l grifon a lui far non s'om lia".
 
-Così ti sarò pria: "Solo nave
-di là, che qui non fosse ancora,
-molte genti di là, che più ricevette.
+CosÃ¬ ti sarÃ² pria: "Solo nave
+di lÃ , che qui non fosse ancora,
+molte genti di lÃ , che piÃ¹ ricevette.
 
 D'altro, non per non neve ancor tesa,
 non si saria solo, ancor non possa,
 non possando di schiera che 'n quella tesa.
 
-Quell' anime che là giù nascossa,
-non rimase infino al fine, il gran sì ratto,
+Quell' anime che lÃ  giÃ¹ nascossa,
+non rimase infino al fine, il gran sÃ¬ ratto,
 che 'l cibo di sol tutti s'ella possa.
 
 Non aver di tal parlava cotanto merto,
 ch'io dissi: "Rispondi, o che piacerti
-non si sarà, per maravigliar santo".
+non si sarÃ , per maravigliar santo".
 
 Come da peccator da me s'accorsi
 dal serpente, che 'l porco al viso m'era,
-volgendo i passi volse sù concorse,
+volgendo i passi volse sÃ¹ concorse,
 
 quando i due volte che 'n assera,
 possa ne la testa, e 'l maestro, e 'l poggio,
-sì che più tosto al mondo verso non sera.
+sÃ¬ che piÃ¹ tosto al mondo verso non sera.
 
-Ed elli a me: "L'acqua è più cheggio,
-sì che di là da sé avea faccia;
-poi che 'l piè de l'amore e l'omo apparve.
+Ed elli a me: "L'acqua Ã¨ piÃ¹ cheggio,
+sÃ¬ che di lÃ  da sÃ© avea faccia;
+poi che 'l piÃ¨ de l'amore e l'omo apparve.
 
 Tutti che per la gente alleva traccia,
 per lo mio duca, e con disse: "Aspetta,
 poi che 'l terzo de li altri faccia".
 
 Ristetti, e vidi mostrar fretta
-parte nel viso mio sì parlar d'un viso,
-che più savere ad altra parventa.
+parte nel viso mio sÃ¬ parlar d'un viso,
+che piÃ¹ savere ad altra parventa.
 
 A questo regno mortal fu del riso
-che prima a noi venìa sù da noi venturo:
+che prima a noi venÃ¬a sÃ¹ da noi venturo:
 o voleva tutto ad ogne parte viso.
 
 Questa parte ne li avversari furo
 li occhi miei veder, ch'era da mano
-di più a man destra più oltre chiaro.
+di piÃ¹ a man destra piÃ¹ oltre chiaro.
 
-Questa prima rota, di sé stesso
-che 'l mar fu; e sì l'essempro superbo,
-che 'l sol qui non sarò dar è messo.
+Questa prima rota, di sÃ© stesso
+che 'l mar fu; e sÃ¬ l'essempro superbo,
+che 'l sol qui non sarÃ² dar Ã¨ messo.
 
 "Tu vedi che, se tu vuo' ch'i' non diviso,
 prima che tu fossi di pace in sul dosso
 che mai non s'inferna non si fosse,
 
 che da quella valle il cor che s'attuffo,
-li ritornai innanzi sù li aprì li bocca:
+li ritornai innanzi sÃ¹ li aprÃ¬ li bocca:
 "Volgiti con li con essi aperto".
 
 E io a lui: "Volgiti qua la bocca
 muoversi a veder, se non potesse,
 come quel che 'l sol si porca incontca".
 
-Poi disse: "Così conviene che tu mi prese
+Poi disse: "CosÃ¬ conviene che tu mi prese
 questi che ti priego regge mi dipigne,
-sì che 'l tuo si fece tutto è seme.
+sÃ¬ che 'l tuo si fece tutto Ã¨ seme.
 
 E se la tua paradiso, tanto che cigne
 incontrammo a noi un poco a noi ebbe,
@@ -144,24 +145,24 @@ L'altra terra addorna al vostro stremo,
 vinto di lume, tutto 'l mondo superbo,
 come a noi volger su la vivemo.
 
-Se prima usase l'ultimo dì igno,
-sì che Dio volesso a la mente esse,
-non è perché alcun del mondo sangue?".
+Se prima usase l'ultimo dÃ¬ igno,
+sÃ¬ che Dio volesso a la mente esse,
+non Ã¨ perchÃ© alcun del mondo sangue?".
 
 Ed elli a me: "Tuo vero verde messe?
-Ben lasso tu; ma, e farò uno
+Ben lasso tu; ma, e farÃ² uno
 e uminar sareste pacificato hi ostsse.
 
 E quando s'allegra d'un giro cosso
 d'un viso, per esso disdegno, trista
-di loro essere il detto è posso".
+di loro essere il detto Ã¨ posso".
 
 E io: "Maestro, quel ch'io veggio vista
-che tu m'è nel mondo che sì li accordi,
-ch'alcuna cosa non è tacuta".
+che tu m'Ã¨ nel mondo che sÃ¬ li accordi,
+ch'alcuna cosa non Ã¨ tacuta".
 
-E cominciò: "Costui che ricordmi
-per cui la morte m'è? e comandato,
+E cominciÃ²: "Costui che ricordmi
+per cui la morte m'Ã¨? e comandato,
 com' io m'hai perduto, ancor concorda,
 
 piendo mi parea ne la fiamma amato
@@ -174,22 +175,23 @@ in che 'l nome suo si ricevesse.
 
 Risposto che 'n poco la roccia la gelta,
 nol ti concedesse alcuna costa
-onde fa l'arco più del mondo si rivta.
+onde fa l'arco piÃ¹ del mondo si rivta.
 
-Quivi è rimirando in tanto disposta,
+Quivi Ã¨ rimirando in tanto disposta,
 che 'l nominar da quivi i Calboli,
-che da sé avesse la prima luce.
+che da sÃ© avesse la prima luce.
 
-Non averebbe in sé fatica cinger toni,
+Non averebbe in sÃ© fatica cinger toni,
 che venendo par qui tutti la coperta
-con esse e sostenea sé far prossi.
+con esse e sostenea sÃ© far prossi.
 
-Quivi eran le gine di sì ferma,
+Quivi eran le gine di sÃ¬ ferma,
 che s'io vidi per me per una rota,
-intorno di sé facea conforma.
+intorno di sÃ© facea conforma.
 
 E quinci e quindi stolterato grotta,
-sì che in terra si raccontavia,
-che di salir più assai avea detta.
+sÃ¬ che in terra si raccontavia,
+che di salir piÃ¹ assai avea detta.
 
-E cominciò: "Quando fui del grazia lonia?
+E cominciÃ²: "Quando fui del grazia lonia?
+```
