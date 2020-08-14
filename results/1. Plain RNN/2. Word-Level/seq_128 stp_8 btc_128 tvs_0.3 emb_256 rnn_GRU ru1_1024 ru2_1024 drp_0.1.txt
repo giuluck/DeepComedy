@@ -1,0 +1,72 @@
+> Temperature Factor: 1
+  - putative tercets --> 7.00
+  - well-formed tercets --> 6.00
+  - structuredness --> 0.81
+  - hendecasyllabicness --> 0.80
+  - rhymeness --> 0.47
+  - plagiarism --> 0.90
+  - repetitivity --> 0.81
+
+> Temperature Factor: 2
+  - putative tercets --> 12.80
+  - well-formed tercets --> 9.80
+  - structuredness --> 0.63
+  - hendecasyllabicness --> 0.66
+  - rhymeness --> 0.27
+  - plagiarism --> 0.72
+  - repetitivity --> 0.73
+
+> Temperature Factor: 3
+  - putative tercets --> 12.80
+  - well-formed tercets --> 10.60
+  - structuredness --> 0.66
+  - hendecasyllabicness --> 0.64
+  - rhymeness --> 0.26
+  - plagiarism --> 0.75
+  - repetitivity --> 0.78
+
+> Temperature Factor: 5
+  - putative tercets --> 15.00
+  - well-formed tercets --> 12.40
+  - structuredness --> 0.65
+  - hendecasyllabicness --> 0.65
+  - rhymeness --> 0.24
+  - plagiarism --> 0.77
+  - repetitivity --> 0.79
+
+> Temperature Factor: 10
+  - putative tercets --> 9.80
+  - well-formed tercets --> 7.60
+  - structuredness --> 0.60
+  - hendecasyllabicness --> 0.59
+  - rhymeness --> 0.26
+  - plagiarism --> 0.78
+  - repetitivity --> 0.80
+
+> Temperature Factor: 20
+  - putative tercets --> 21.80
+  - well-formed tercets --> 16.60
+  - structuredness --> 0.78
+  - hendecasyllabicness --> 0.79
+  - rhymeness --> 0.20
+  - plagiarism --> 1.00
+  - repetitivity --> 1.00
+
+> Temperature Factor: 50
+  - putative tercets --> 31.00
+  - well-formed tercets --> 24.60
+  - structuredness --> 0.79
+  - hendecasyllabicness --> 0.84
+  - rhymeness --> 0.25
+  - plagiarism --> 1.00
+  - repetitivity --> 1.00
+
+> Temperature Factor: 100
+  - putative tercets --> 31.40
+  - well-formed tercets --> 25.00
+  - structuredness --> 0.63
+  - hendecasyllabicness --> 0.65
+  - rhymeness --> 0.20
+  - plagiarism --> 0.80
+  - repetitivity --> 0.80
+

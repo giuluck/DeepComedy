@@ -1,0 +1,9 @@
+> Temperature Factor: 1
+  - putative tercets --> 0.00
+  - well-formed tercets --> 0.00
+  - structuredness --> 0.00
+  - hendecasyllabicness --> 0.00
+  - rhymeness --> 0.00
+  - plagiarism --> 0.00
+  - repetitivity --> 0.00
+
