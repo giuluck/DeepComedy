@@ -2,7 +2,15 @@
 
 Neural Network aiming at reproducing the style used by Dante in the Divine Comedy.
 
-### *Sample of Generated Canto*
+## Requirements
+
+* Python 3+
+* NumPy
+* Tensorflow 2
+* Matplotlib
+* Seaborn
+
+## *Sample of Generated Canto*
 
 ```
 O dolce padre mio, figliuol, che fai
