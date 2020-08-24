@@ -1,0 +1,13 @@
+\chapter{Introduction}
+
+Aim of this project was to create an effective and efficient Neural Network able to reproduce the style adopted by Dante in his \textit{Divine Comedy}.
+In order to do that, we downloaded the full poem from \url{https://raw.githubusercontent.com/genez/dante/master/dante.txt} and stored it, after some manual cleaning, in the \texttt{res} folder of our repository.
+
+All of our code is of public domain and can be found at \url{https://github.com/mazzio97/DeepComedy}. 
+The ensemble of utility functions, mostly involving model checkpoints and text processing, have been written in Python 3 and collected in the \texttt{src} folder; instead, the different architectures have been modelled and trained using Python Notebooks (\texttt{.ipynb} files) in order to exploit free GPU acceleration offered by Google Colab.
+
+We built all the models with Tensorflow 2, both because of its large number of library functions and because of its inner support to Keras layers and utils.
+Due to the high weight of the model's \texttt{.h5} files, we decided not to add all of them to the repository but just the final one;
+anyhow, a text file containing a report of our results for each tested configuration is present, and a working code is provided for all the models we developed, so everything can be easily replicated by opening the notebooks in Google Colab.
+
+Eventually, after having tried six different kinds of architectures, each of them instantiated in two or three different variations, and having experimented with hyperparameters as well, we chose as our definitive model a \textit{Transformer} whose inputs are a patch of three verses and whose output is an entire new verse, with which we could achieve reasonable results in terms of text structure, verse structure (i.e. hendecasyllables), rhyming schemes and obviously avoid any kind of plagiarism to the original \textit{Divine Comedy}.

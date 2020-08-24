@@ -1,0 +1,45 @@
+\documentclass[12pt]{report}
+\title{
+    \Huge{Deep Comedy}\\
+    \vspace{10pt}
+    \Large{Final Report}
+}
+\author{
+    Luca Giuliani\thanks{
+        \href{mailto:luca.giuliani10@studio.unibo.it}{luca.giuliani10@studio.unibo.it} - 0000933791
+    } \and Diego Mazzieri\thanks{
+        \href{mailto:diego.mazzieri@studio.unibo.it}{diego.mazzieri@studio.unibo.it} - 0000920452
+    }
+}
+\date{\today}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage{csquotes}
+\usepackage[sorting=none]{biblatex}
+\addbibresource{bibliography.bib}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Deep Comedy Report}}
+
+\usepackage{paracol}
+\setlength{\columnsep}{18pt}
+
+\sloppy
+\Urlmuskip=0mu plus 5mu
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\input{chapters/introduction}
+\input{chapters/architectures}
+\input{chapters/results}
+
+\printbibliography
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\end{document}

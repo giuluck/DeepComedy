@@ -1,0 +1,51 @@
+\chapter{Results and Future Works}
+
+Overall, our selected model turned out to be reasonably able to automatically discover and learn the hidden patterns of the \textit{Divine Comedy}, as explicitly asked in the requirements for the project, and to replicate them as well.
+In fact, no external hint about syllabication and rhymes has been given to the network, apart from the fact that we reasonably had to split the input and output samples so that they were made of full verses instead of random patches starting and ending in the middle of a verse.
+
+Given that, we feel very proud of the results achieved, but still we know that, with more time and experience, we may have been able to outperform even the result we could reach.
+For this reason, the last part of our report will be dedicated to the presentation of some newer and more sophisticated techniques that may be used in some future work to raise the bar in this task of generating the \textit{Divine Comedy}.
+
+\subsubsection{\textsc{Bert}}
+
+\textit{BERT}, standing for \textit{Bidirectional Encoder Representations from Transformers}, is a recently proposed architecture "designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers" \cite{devlin2018bert}.
+However, even though \textit{BERT} was initially intended to be a pre-trained network to be fine-tuned in order to solve many \textit{Natural Language Processing} tasks such as text classification, reading comprehension, and so on, its full application to \textit{Neural Machine Translation} had not been investigated until the last months by Zhu et al. \cite{zhu2020incorporating}.
+
+Clearly, we do not know how much \textit{BERT} could be effective for the purposes of our task, but still we think it may need some further investigations, and the reason we did not do that on our own is because the architecture is too new to be incorporated in some library and, as well, it looks very heavy to train, which would most probably require ad-hoc equipment that we do not possess.
+
+\subsubsection{\textsc{Long Term Dependencies}}
+
+Though \textit{Seq2Seq} models seemed to perform well in discovering patterns, there are some problems, strictly related to the semantics of a text and not to its syntax, which are somehow intrinsic and cannot be solved with standard techniques.
+In fact, as the input of our model was made up of the last three generated verses, the network could not have any insight on what had happened before, meaning that there is no possibility at all that the overall generated text would be following a story, with recurrent characters and/or well-constructed dialogues.\footnote{
+    This can be noticed, for example, from the fact that sometimes our network fails to close quote marks, specifically when the spoken sentence is longer than three verses, because there is no way the network would know it had opened them at all.
+}
+Also, taking our case as example, the network will fail at correctly predict the \texttt{=endofcanto=} marker, leading the conclusion of a canto to be quite ruled by randomness, in the sense that, if after each tercet the probability of predicting the \texttt{=endofcanto=} marker is, say, \textit{0.02}, then on average a canto will last after \textit{50} verses, but the process is completely stochastic.
+
+One way to solve this problem could be by using \textit{Stateful RNNs}, which maintain an inner representation of what has been processed so far by the network and, therefore, there could be a possibility that in context vectors is kept some information about how much "time" ago the canto started, or the quote mark has been opened.
+Still, as we could experiment, \textit{RNNs} are not the most suitable model for this task, as they are too heavy to train and they are not powerful enough to discover the patterns.
+
+A practical solution could be to mix both of these ideas.
+Essentially, we could use a \textit{Stateful RNN} (or something similar, like \textit{BERT}), to extract a context vector from all the text generated so far, i.e. some latent representation of a "summary" of the text, and use this context vector together with the standard input, i.e. the tokenization of last three generated verses, as input for the \textit{Transformer} model.
+
+\subsubsection{\textsc{Stable GANs}}
+
+As we could see during our experiments, finding the equilibrium point of a \textit{GAN} can be quite challenging, but it is something that must be overcome in case we would like to explore some kind of adversarial technique for our task.
+
+As this is a widely known issue for adversarial models, which has been recently addressed and studied, some interesting ideas have been proposed during the last few years.
+One of the most famous work related to that, published in 2017 by Arjovsky et al., presents the so-called \textit{Wasserstein GAN}, or \textit{WGAN}, a special kind of \textit{GAN} that tries to improve the stability of learning with the help of some kind of probabilistic regularization, while providing "meaningful learning curves useful for debugging and hyperparameter searches" \cite{arjovsky2017wasserstein}.
+
+Finally, we also wanted to pose the attention on some works even more strictly related to the field of \textit{Natural Language Processing}, in which adversarial approaches are not so widely used yet.
+The work we are referring to, published in 2019 by Haidar and Rezagholizadeh, exploits both \textit{Autoencoders} and \textit{GANs} to build a so-called \textit{TextKD-GAN}, namely a \textit{GAN} for text generation which uses an innovative approach known as \textit{Knowledge Distillation} \cite{haidar2019textkd}.
+
+\subsubsection{\textsc{Different Networks for Different Purposes}}
+
+In case the previous approaches would not be enough, a final improvement could be made by introducing some kind of domain knowledge and develop different modules taking care of different aspects of the generation.
+
+For example, an approach used by Benhardt et al. in 2018 to achieve \textit{state-of-the-art} results in the generation of Shakespearian sonnets, is to use two neural networks: one aimed at finding the last syllable so that the rhyming scheme would be preserved, and the other one aimed at filling the remaining part of the verse so that it could follow the structure of a iambic pentameter\footnote{
+    Actually, their work was even more complex, and took advantage of the \textit{POS-tagging} of the tokens and some instilled constraints over them so that not only the verse would have been made of ten syllables, but also it would be meaningful from a semantic point of view.
+} \cite{benhardt2018shall}.
+
+Moreover, another very useful and important module that could be developed for the purpose is a syllabication module, correctly able to understand both synalephe and dialepha.
+With that, it could be possible to correctly split the input text in eleven tokens and, therefore, the hendecasyllables would most probably be perfect all the time because, if the network is powerful enough, it should not be difficult for it to understand that we are clearly imposing the generation of a newline token after other eleven tokens.
+
+In the end, what we could say about this approach is that, even though it can be regarded somehow as "cheating", as the network receives some big hints about the text structures and patterns without having to understand them on its own, this is actually how our brain works, i.e. with many different areas (modules), each one taking care of a different aspect of the computation, and finally merging all the results in a single outcome.

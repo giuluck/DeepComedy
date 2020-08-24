@@ -1,0 +1,20 @@
+\section{Verse-Space Transformer}
+
+Given that the \textit{Plain Transformer} model gave slightly better results in terms of rhyming scheme, we tried to use the same architecture to perform a more straight-forward \textit{Sequence To Sequence} approach, like we had done for the third model.
+Thus, we split again the \textit{Divine Comedy} in single verses and used as input a patch made up of three consecutive verses and, as output, not just the fourth one but the entire patch made up of the all four, exactly as we did for the \textit{Seq2Seq RNN} architecture\footnote{
+    Actually, we also tried some configurations in which we used either four or six verses as input, and five or seven as output respectively, but we could not get greater results, probably due to the greater length of the sequences.
+}.
+
+\subsubsection{\textsc{Hyperparameters and Results}}
+
+Here, the hyperparameters we had to tune were the same ones of the previous model, i.e. the number of layers, the number of heads, the \texttt{d\_model}, the \texttt{dff} and the dropout rate.
+
+Way more than previous architectures, this one seemed to be very sensible to the variation of the hyperparameters, producing samples having a wider range of scores in the employed metrics.
+
+Also, quite interestingly, tinier models seemed to be more capable of generating better samples.
+We interpreted this fact as a proof that, for generative tasks, sometimes it could be better to have a small network which is unable to reproduce the training samples (e.g. in our case, the Neural Network is unable to reproduce the exact \textit{Divine Comedy}) but, instead, it is able to generate samples that, far from being equal, are similar to the training samples.
+Instead, this is something that turns out to be almost useless for \textit{Neural Machine Translation} tasks, in which we may need a bigger network with a great ability to reproduce original samples (e.g. to correctly translate a sentence from Italian to English), nevertheless failing at finding more "particular" patterns and, therefore, which would not be able to generate good samples when using higher temperatures during the generative phase.
+
+In the end, even though the \textit{Word-Level} model could not obtain scores that overcame the previous ones (instead, the scores related to the rhyming scheme were lower with respect to almost all of them), maybe due to the fact that we could not find a correct configuration of hyperparameters; the \textit{Subword-Level} model definitely exceeded the bounds set by previous models in terms of rhyming scheme, reaching peaks of \textit{0.89} for that score.
+Furthermore, as regards the overall structure of the tercets, the score was optimal for almost all of the tested configurations, while for the \texttt{hendecasyllabicness} we could reach a peak of \textit{0.90} only.
+This, though being slightly lower with respect to that of the first two models, can be still considered a good result; in fact, we should take in mind that the provided code used for evaluation, when tested on the first canto of the \textit{Divine Comedy}, due to the complex phenomena of synalephe and dialepha widely used by Dante, did not gave a full score for that particular metric, but returned instead a value which was around \textit{0.94}.
